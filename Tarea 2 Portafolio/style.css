@@ -1,0 +1,129 @@
+/*Fuentes importadas desde Google*/
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Playwrite+BE+VLG:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+*{ /*Se utiliza para quitar margenes y rellenos de todo el documento*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-text{
+    font-size: 60px; /*Tamaño de la letra*/
+    text-align: center; /*Sirve para centrar el texo*/
+}
+
+.img{
+    height: 600px; /*largo*/
+    background: linear-gradient(rgba(255, 255, 255, 0.429),rgba(255, 255, 255, 0.429)),
+    url(img1.jpg); /*linear-gradient con dos colores rgba para poner la capa transparente a la imagen*/
+    background-size: cover; /*escala la imagen al mayor tamaño sin deformarla*/
+    display: flex; /*rellena todo el espacio disponible*/
+    justify-content: center; /*alineación eje principal*/
+    align-items: center; /*alineación transversal*/
+}
+
+nav{
+    background-color:#f2f2f2;
+    text-align: center; 
+    position: fixed; /*Para fijar la barra de navegación cuando se baja*/
+    left: 0;
+    top: 0;
+    width: 100%; /*ancho*/
+}
+
+ul li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block; /*uno al lado del otro en línea*/
+    text-decoration: none; /*sin decoración del texto*/
+    text-align: center;
+    color:darkslategray;
+    margin: 10px 100px;
+    padding: 10px 10px;
+    border-radius: 30px; /* para darle borde redondeado*/
+}
+
+a:hover{ /*para hacer el sombreado al pasar el mouse*/
+    background-color: #000;
+    color: #f2f2f2;
+}
+
+#inicio h1{
+    color:#000;
+    font-size: 50px;
+    text-align: center;
+    font-family: Playwrite AR;
+}
+
+#inicio p{
+    font-size: 30px;
+    text-align: center;
+}
+
+.parte2y3{
+    background: linear-gradient(rgba(255, 255, 255, 0.429),rgba(255, 255, 255, 0.429)), url(img1.jpg);
+    background-size:cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column; /*ordena los elementos de la página*/
+    justify-content: center;
+    align-items: center;
+}
+
+#sobremi h2{
+    font-family: Acme;
+    color:rgba(0, 0, 0, 0.7);
+    background-color: rgba(245, 222, 179, 0.5);
+    margin-top: 70px;
+    font-size: 50px;
+    text-indent: 20px; /*sirve para hacer sangría*/
+    text-align: center;
+    letter-spacing: 2vw; /*sirve para separar cada letra*/
+}
+
+#sobremi p{
+    font-size: 20px;
+    text-align:justify;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: Acme;
+}
+.imagenes{
+    display: flex;
+    justify-content: center;
+}
+.img1{
+    margin-right: 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*crea un borde al rededor de la imágen, 50% hace que sea redondo*/
+    border: 5px solid black; /*grosor y color del borde*/
+}
+.img2y3{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+#miexperiencia h2{
+font-family: Acme;
+font-size: 50px;
+}
+
+#miexperiencia p{
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 25px;
+    font-family: Imprima;
+    text-align: justify;
+}
+
+
+
