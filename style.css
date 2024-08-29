@@ -9,19 +9,12 @@
     box-sizing: border-box;
 }
 
-.img-text{
-    font-size: 60px; /*Tamaño de la letra*/
-    text-align: center; /*Sirve para centrar el texo*/
+html {
+    font-size: 16px;
 }
 
-.img{
-    height: 600px; /*largo*/
-    background: linear-gradient(rgba(255, 255, 255, 0.429),rgba(255, 255, 255, 0.429)),
-    url(img1.jpg); /*linear-gradient con dos colores rgba para poner la capa transparente a la imagen*/
-    background-size: cover; /*escala la imagen al mayor tamaño sin deformarla*/
-    display: flex; /*rellena todo el espacio disponible*/
-    justify-content: center; /*alineación eje principal*/
-    align-items: center; /*alineación transversal*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav{
@@ -31,98 +24,178 @@ nav{
     left: 0;
     top: 0;
     width: 100%; /*ancho*/
+    z-index: 1000;
 }
 
-ul li{
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0 1rem;
 }
 
-a{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+nav a{
     display: inline-block; /*uno al lado del otro en línea*/
     text-decoration: none; /*sin decoración del texto*/
-    text-align: center;
     color:darkslategray;
-    margin: 10px 100px;
-    padding: 10px 10px;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 30px; /* para darle borde redondeado*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a:hover{ /*para hacer el sombreado al pasar el mouse*/
+nav a:hover{ /*para hacer el sombreado al pasar el mouse*/
     background-color: #000;
     color: #f2f2f2;
 }
 
+.img-text{
+    font-size: 2rem; /*Tamaño de la letra*/
+    text-align: center; /*Sirve para centrar el texo*/
+}
+
+.img{
+    height: 50vh; /*largo*/
+    background: linear-gradient(rgba(255, 255, 255, 0.429),rgba(255, 255, 255, 0.429)),
+    url(img1.jpg); /*linear-gradient con dos colores rgba para poner la capa transparente a la imagen*/
+    background-size: cover; /*escala la imagen al mayor tamaño sin deformarla*/
+    background-position: center;
+    display: flex; /*rellena todo el espacio disponible*/
+    justify-content: center; /*alineación eje principal*/
+    align-items: center; /*alineación transversal*/
+}
+
 #inicio h1{
     color:#000;
-    font-size: 50px;
+    font-size: 3rem;
     text-align: center;
     font-family: Playwrite AR;
 }
 
 #inicio p{
-    font-size: 30px;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .parte2y3{
     background: linear-gradient(rgba(255, 255, 255, 0.429),rgba(255, 255, 255, 0.429)), url(img1.jpg);
     background-size:cover;
-    height: 600px;
+    background-position: center;
     display: flex;
     flex-direction: column; /*ordena los elementos de la página*/
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 #sobremi h2{
     font-family: Acme;
     color:rgba(0, 0, 0, 0.7);
     background-color: rgba(245, 222, 179, 0.5);
-    margin-top: 70px;
-    font-size: 50px;
-    text-indent: 20px; /*sirve para hacer sangría*/
+    margin: 2rem 0;
+    font-size: 2.5rem;
     text-align: center;
-    letter-spacing: 2vw; /*sirve para separar cada letra*/
+    letter-spacing: 0.1rem; /*sirve para separar cada letra*/
 }
 
 #sobremi p{
-    font-size: 20px;
+    font-size: 1rem;
     text-align:justify;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin: 0 1rem;
     font-family: Acme;
 }
 .imagenes{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
-.img1{
-    margin-right: 25px;
-    width: 150px;
-    height: 150px;
+.img1, .img2y3{
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%; /*crea un borde al rededor de la imágen, 50% hace que sea redondo*/
     border: 5px solid black; /*grosor y color del borde*/
-}
-.img2y3{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid black;
+    margin: 0.5rem;
 }
 
 #miexperiencia h2{
 font-family: Acme;
-font-size: 50px;
+font-size: 2.5rem;
+text-align: center;
 }
 
 #miexperiencia p{
-    margin-left: 150px;
-    margin-right: 150px;
-    font-size: 25px;
+    font-size: 1.2rem;
+    margin: 0 1rem;
     font-family: Imprima;
     text-align: justify;
+}
+
+@media (max-width: 768px){
+    .img-text{
+        font-size: 1.5rem;
+    }
+    #inicio h1{
+        font-size: 2rem;
+    }
+    #inicio p{
+        font-size: 1rem;
+    }
+    #sobremi h2{
+        font-size: 2rem;
+    }
+    #sobremi p{
+        font-size: 0.9rem;
+        margin: 0 0.5rem;
+    }
+    .img1, .img2y3{
+        width: 6rem;
+        height: 6rem;
+    }
+    #miexperiencia h2{
+        font-size: 2rem;
+    }
+    #miexperiencia p{
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+}
+@media (max-width: 480px){
+    nav ul li{
+        display: block;
+        padding: 0.5rem;
+    }
+    nav a{
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
+    }
+    .img-text{
+        font-size: 1.2rem;
+    }
+    #inicio h1{
+        font-size: 1.5rem;
+    }
+    #inicio p{
+        font-size: 0.9rem;
+    }
+    #sobremi h2{
+        font-size: 1.5rem;
+    }
+    #sobremi p{
+        font-size: 0.8rem;
+    }
+    .img1, .img2y3{
+        width: 5rem;
+        height: 5rem;
+    }
+    #miexperiencia h2{
+        font-size: 1.5rem;
+    }
+    #miexperiencia p{
+        font-size: 0.9rem;
+    }
 }
 
 
