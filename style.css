@@ -17,7 +17,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-   /* padding-top: 60px; */
 }
 
 .container {
@@ -70,7 +69,6 @@ nav a:hover{ /*para hacer el sombreado al pasar el mouse*/
 }
 
 section {
-    /* background-image: url(img1.jpg); */
     background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
@@ -79,8 +77,7 @@ section {
     
 }
 
-#inicio, #sobremi, #miexperiencia{
-   
+#inicio, #sobremi, #miexperiencia{ 
     height: 100vh;
     background: linear-gradient(rgba(255, 255, 255, 0.429), rgba(255, 255, 255, 0.429)), url(img1.jpg);
     background-size: cover;
@@ -108,7 +105,6 @@ section {
 }
 
 .parte2y3{
-    /*background: linear-gradient(rgba(255, 255, 255, 0.429),rgba(255, 255, 255, 0.429)), url(img1.jpg);*/
     background-size:cover;
     background-position: center;
     display: flex;
